@@ -45,6 +45,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.lbComanda = new System.Windows.Forms.Label();
             this.lstPret = new System.Windows.Forms.ListBox();
+            this.btnReset = new System.Windows.Forms.Button();
             this.gbAlegere.SuspendLayout();
             this.gbDimensiune.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPizza)).BeginInit();
@@ -72,6 +73,7 @@
             this.chkPui.TabIndex = 3;
             this.chkPui.Text = "Pui                5 Lei";
             this.chkPui.UseVisualStyleBackColor = true;
+            this.chkPui.CheckedChanged += new System.EventHandler(this.chkPui_CheckedChanged);
             // 
             // chkPorumb
             // 
@@ -82,6 +84,7 @@
             this.chkPorumb.TabIndex = 2;
             this.chkPorumb.Text = "Porumb        3 Lei";
             this.chkPorumb.UseVisualStyleBackColor = true;
+            this.chkPorumb.CheckedChanged += new System.EventHandler(this.chkPorumb_CheckedChanged);
             // 
             // chkCiuperci
             // 
@@ -128,6 +131,7 @@
             this.rbMedie.TabStop = true;
             this.rbMedie.Text = "Medie";
             this.rbMedie.UseVisualStyleBackColor = true;
+            this.rbMedie.CheckedChanged += new System.EventHandler(this.rbMedie_CheckedChanged);
             // 
             // rbMare
             // 
@@ -150,6 +154,7 @@
             this.rbMica.TabStop = true;
             this.rbMica.Text = "Mica";
             this.rbMica.UseVisualStyleBackColor = true;
+            this.rbMica.CheckedChanged += new System.EventHandler(this.rbMica_CheckedChanged);
             // 
             // cboSortiment
             // 
@@ -192,11 +197,12 @@
             this.lbPret.Size = new System.Drawing.Size(16, 17);
             this.lbPret.TabIndex = 8;
             this.lbPret.Text = "0";
+            this.lbPret.Click += new System.EventHandler(this.lbPret_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(201, 429);
+            this.label1.Location = new System.Drawing.Point(329, 429);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(27, 17);
             this.label1.TabIndex = 9;
@@ -218,9 +224,9 @@
             this.lbComanda.BackColor = System.Drawing.SystemColors.Control;
             this.lbComanda.Location = new System.Drawing.Point(116, 495);
             this.lbComanda.Name = "lbComanda";
-            this.lbComanda.Size = new System.Drawing.Size(130, 17);
+            this.lbComanda.Size = new System.Drawing.Size(0, 17);
             this.lbComanda.TabIndex = 11;
-            this.lbComanda.Text = "Comanda in curs....";
+            this.lbComanda.Click += new System.EventHandler(this.lbComanda_Click);
             // 
             // lstPret
             // 
@@ -238,11 +244,22 @@
             this.lstPret.Visible = false;
             this.lstPret.SelectedIndexChanged += new System.EventHandler(this.lstPret_SelectedIndexChanged);
             // 
+            // btnReset
+            // 
+            this.btnReset.Location = new System.Drawing.Point(556, 470);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(75, 23);
+            this.btnReset.TabIndex = 13;
+            this.btnReset.Text = "RESET";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(657, 530);
+            this.Controls.Add(this.btnReset);
             this.Controls.Add(this.lstPret);
             this.Controls.Add(this.lbComanda);
             this.Controls.Add(this.button1);
@@ -284,6 +301,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lbComanda;
         private System.Windows.Forms.ListBox lstPret;
+        private System.Windows.Forms.Button btnReset;
     }
 }
 
